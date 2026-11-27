@@ -43,3 +43,9 @@ See the Getting started section of the main README. In short: `uvicorn app.main:
 ## Next (Milestone 3)
 
 Replace the baseline forecast with the trained ML model, add registration and login, deploy the app.
+
+## Update: owner dashboard
+
+- The owner dashboard is protected by a password (`OWNER_PASSWORD` in `backend/.env`, demo password `owner123`). Without it the owner API answers 401.
+- After login the owner sees revenue, a table per lot and a list of all bookings: driver, lot, date, time, amount and status.
+- Code: `backend/app/services/owner_auth.py`, `frontend/src/pages/OwnerDashboard.tsx`.
